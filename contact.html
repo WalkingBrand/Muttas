@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    * {box-sizing: border-box;
+    } 
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Article */ 
+article { 
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color:rgba(255, 255, 255, 0.596); 
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer {
+    background-color:
+     rgba(153, 205, 50, 0.747);
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav {
+    float: left;
+    width: 30%;
+    background: rgba(10, 170, 10, 0.705);
+    padding: 10px
+}
+/* List inside the menu */ 
+nav ul {
+    list-style-type: none;
+    padding: 0; 
+}
+/* Style the header */ 
+#header-background{
+    width: 100%;
+    height: 100px;
+    background:url(https://media.istockphoto.com/photos/leafy-green-background-picture-id1050730168?k=6&m=1050730168&s=170667a&w=0&h=F-Xutlzsoh43FxKiaZigga_fx81C6bLOU6BEqGBBXDI=);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: whitesmoke;
+}
+
+/* Responsive Layout, for small screens */ 
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+    
+  }
+}
+    /* unvisited link */
+a:link {
+  color: rgb(2, 120, 230);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(128, 0, 85);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(33, 119, 22, 0.658);
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+/* My menu */
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #44e2356c;
+  }
+
+    h1 {
+      font-family: sans-serif;
+      text-align: center;
+        }   
+        p {
+         font-family: serif;       
+         text-align: center;
+         font-size: 18.8px;
+        }
+    img {
+        border-image: 50px, rgb(0, 0, 0);
+        text-align: center;
+        }
+        </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Vegan! :)</title>
+</head>
+<body>
+    <header id="header-background">
+        <img src=
+        'https://images.vexels.com/media/users/3/207141/isolated/preview/69e000b25e4ae7b9473fe1d1ab398521-green-leaf-vegan-icon-by-vexels.png'
+        alt= 'Vegan Leaf Image' style= 'width:125px;height:125px'>
+        
+            </header>
+    <section>
+        <nav><ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <section>
+             <article>
+                 <h1>We'd be happy to hear from you!</h1>
+                
+                 <div class='container'>
+             <form action="mail.php" method="POST">
+
+              <label for='fname'>First Name</label>
+              <input type='text' id='fname' name='firstname'
+              placeholder="Your first name...">
+
+              <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for='country'>Country</label>
+              <select id='country' name='country'>
+                  <option value='australia'>Australia</option>
+                  <option value='canada'>Canada</option>
+                  <option value='usa'> USA </option>
+              </select>
+              
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your Email...">
+          
+              <label for='subject'>Subject</label>
+                <textarea id='subject' name='subject' placeholder=
+                'Write Something...' style='height:200px'></textarea>
+              
+                <input type="submit" value="Submit">
+
+                 </form>
+                </div>
+              
+
+             </form>
+            </div>
+            
+             </section>
+             <footer> Ayyylmao Trademarks </footer>
+        
+    <body style= 
+    'background-image: url("https://www.wallpapertip.com/wmimgs/43-436919_vegan-quotes-wallpapers-for-mobile-vegan-wallpaper-hd.jpg");'>
+<script src="index.js"></script> 
+</body>
+</html>
